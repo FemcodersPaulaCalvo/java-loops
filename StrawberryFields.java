@@ -5,6 +5,15 @@ public class StrawberryFields {
     //Al final está la letra completa
     
     public static void main(String[] args) {
+        int[] song = {-1,0,-1,1,-1,2,-1};
+
+        for (int i = 0; i < song.length; i++){
+            if(song[i] == -1){
+                playChorus();
+            } else {
+                playVersus(song[i]);
+            }
+        }
 
     }
 
@@ -16,7 +25,28 @@ public class StrawberryFields {
      * Inside the function:
      * 1. print versus according the position number
      */
-    
+
+    public static void playVersus (int number){
+        String[] songVersus = {
+                "Living is easy with eyes closed\n" +
+                        "Misunderstanding all you see\n" +
+                        "It's getting hard to be someone, but it all works out\n" +
+                        "It doesn't matter much to me\n",
+                "No one I think is in my tree\n" +
+                        "I mean, it must be high or low\n" +
+                        "That is, you can't, you know, tune in, but it's alright\n" +
+                        "That is, I think it's not too bad\n",
+                "Always, no sometimes, think it's me\n" +
+                        "But you know, I know when it's a dream\n" +
+                        "I think I know, I mean a yes\n" +
+                        "But it's all wrong\n" +
+                        "That is, I think I disagree\n"
+        };
+
+            System.out.println(songVersus[number]);
+
+
+    }
 
     /**
      * Function name: playChorus
@@ -24,7 +54,14 @@ public class StrawberryFields {
      * Inside the function:
      * 1. print chorus 
      */
-    
+
+    public static void playChorus(){
+        System.out.println("Let me take you down\n" +
+                "Cause I'm going to strawberry fields\n" +
+                "Nothing is real\n" +
+                "And nothing to get hung about\n" +
+                "Strawberry fields forever\n");
+    }
 
 }
 

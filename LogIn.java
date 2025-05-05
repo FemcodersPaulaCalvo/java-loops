@@ -21,6 +21,6 @@ public class LogIn {
 
         } while (logInOk == false);
 
-
+        scanner.close();
     }
 }
